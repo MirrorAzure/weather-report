@@ -90,4 +90,4 @@ def get_city_stats(q: str, period_begin: str = None, period_end: str = None):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", host="127.0.0.1", port=8080, reload=False)
+    uvicorn.run(app="main:app", host="0.0.0.0", port=8080, reload=False)
