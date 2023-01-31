@@ -1,0 +1,4 @@
+scrapy
+fastapi
+uvicorn
+apscheduler

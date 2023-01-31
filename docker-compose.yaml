@@ -1,0 +1,17 @@
+version: '4'
+
+volumes:
+  database:
+
+services:
+  weather-report:
+    build: .
+    container_name: Weather_Report
+    ports:
+      - "8080:8080"
+    volumes:
+      - database:/usr/src/app/database
+    environment:
+       TZ: Europe/Moscow
+       WEATHER_API_TOKEN: your_token_here
+       DB_PATH: /usr/src/app/database/weather.db

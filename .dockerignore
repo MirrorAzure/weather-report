@@ -1,0 +1,8 @@
+.gitignore
+.git
+
+__pycache__
+weather_parser/__pycache__
+weather_parser/spiders/__pycache__
+
+database
