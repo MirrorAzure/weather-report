@@ -43,6 +43,9 @@ def add_city(city: str):
     if resp["cod"] == '404':
         return {"message": f"weather data for city {city} is not available"}
     
+    if resp["cod"] == 401:
+        return {"message": f"invalid API token. please provide working token in .env file"}
+
     # если город существует, в "cod" лежит число 200
     if resp["cod"] == 200:
         query = f"INSERT INTO cities (city_name) VALUES (\"{resp['name']}\");"
