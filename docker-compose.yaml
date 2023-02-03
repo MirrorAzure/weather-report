@@ -13,5 +13,5 @@ services:
       - database:/usr/src/app/database
     environment:
        TZ: Europe/Moscow
-       WEATHER_API_TOKEN: your_token_here
-       DB_PATH: /usr/src/app/database/weather.db
+       WEATHER_API_TOKEN: ${WEATHER_API_KEY}
+       DB_PATH: ${DB_PATH}
