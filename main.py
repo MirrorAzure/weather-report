@@ -26,6 +26,10 @@ def app_init():
     scheduler.add_job(scrape_weather_data, 'cron', minute='*/1')
     scheduler.start()
 
+@app.get('/')
+def main_page():
+    return {"message": "success"}
+
 @app.post('/weather/{city}')
 def add_city(city: str):
     # для начала проверим, не записан ли в БД этот город
